@@ -9,13 +9,14 @@ class NoTodoView extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
     return Container(
       width: double.infinity,
       margin: EdgeInsets.all(20),
       padding: EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: Colors.grey[200],
         borderRadius: BorderRadius.circular(12),
+        color: isDark ? const Color(0xFF1C1C1E) : Colors.grey[200],
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,

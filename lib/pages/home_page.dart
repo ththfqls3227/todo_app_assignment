@@ -16,6 +16,7 @@ class _HomePageState extends State<HomePage> {
   final String appBarTitle = "솔빈's Tasks";
   final List<TodoEntity> todos = [];
 
+
   Future<void> addTodo() async {
     final newTodo = await showModalBottomSheet<TodoEntity>(
       context: context,
@@ -66,11 +67,12 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        backgroundColor: Colors.grey[200],
-        centerTitle: true,
+        backgroundColor: isDark ? const Color(0xFF1C1C1E) : Colors.grey[200],
+      centerTitle: true,
         title: Text(
           appBarTitle,
           style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
