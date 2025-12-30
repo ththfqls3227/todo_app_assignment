@@ -10,14 +10,13 @@ Flutter로 만든 Todo 앱.
 - 주요 화면
   - HomePage
   - ToDoDetailPage
-  - 
 
 ## 구현한 기능
 
 ### 1. 할 일 추가
 
-- 하단 + 버튼 누르면 BottomSheet 올라옵니다
-- 제목 입력용 TextField 있습니다
+- 하단 + 버튼 누르면 BottomSheet
+- 제목 입력용 TextField
 - BottomSheet 열리면 키보드 자동으로 올라오게 처리
 - 제목 안 쓰면 저장 X
 - 즐겨찾기 여부 선택 가능
